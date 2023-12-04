@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageview"
+        android:src="@drawable/logo"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Feed Food"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="189dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Login To Your\nAdmin Dashboard"
+        android:textAlignment="center"
+        android:textColor="#DCCDCC"
+        android:textSize="40sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="254dp" />
+
+    <TextView
+        android:id="@+id/t_email"
+        android:layout_width="380dp"
+        android:layout_height="58dp"
+        android:layout_gravity="center"
+        android:hint="Email"
+        android:padding="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="361dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/add_email"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#fff"
+        android:hint="Email"
+        android:padding="20dp"
+        android:paddingStart="20dp"
+        android:textColor="#050505"
+        android:outlineSpotShadowColor="#151515"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="419dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/t_pwd"
+        android:layout_width="380dp"
+        android:layout_height="58dp"
+        android:layout_gravity="center"
+        android:hint="Password"
+        android:padding="20dp"
+        android:textStyle="bold"
+
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="494dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/add_pwd"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#fff"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:paddingStart="20dp"
+        android:textColor="#050505"
+        android:outlineSpotShadowColor="#151515"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="562dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/bt_Login"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingStart="30dp"
+        android:text="LOGIN"
+        android:textColor="#fff"
+        app:strokeColor="#530505"
+        tools:ignore="MissingConstraints,RtlSymmetry"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="649dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
