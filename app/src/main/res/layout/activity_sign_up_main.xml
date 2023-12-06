@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".signUpMainActivity">
 
     <ImageView
         android:id="@+id/imageview"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,46 +30,85 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageview" />
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginLeft="20dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="20dp"
+        app:endIconDrawable="@drawable/arrow_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <AutoCompleteTextView
+            android:id="@+id/listOfLocation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="chose your location"
+            android:background="@drawable/edittextshape"
+            android:inputType="none"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-black"
-        android:text="Login to Your\nAdmin Dasbord"
+        android:text="Sign Up for Your\nAdminDasbord"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
+        android:id="@+id/name"
+        android:layout_width="0dp"
         android:layout_height="52dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginRight="20dp"
         android:background="@drawable/edittextshape"
-        android:drawableLeft="@drawable/mail"
+        android:drawableLeft="@drawable/usernew"
         android:drawablePadding="15dp"
+        android:layout_marginTop="16dp"
         android:elevation="2dp"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
+        android:hint="Name Owner"
+        android:inputType="textPersonName"
         android:paddingLeft="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/nameRestaurant"
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="20dp"
+        android:background="@drawable/edittextshape"
+        android:drawableLeft="@drawable/home"
+        android:drawablePadding="15dp"
+        android:elevation="2dp"
+        android:hint="Account Restaurant"
+        android:inputType="textEmailAddress"
+        android:paddingStart="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <EditText
+        android:id="@+id/restaurantPassword"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/edittextshape"
         android:drawableLeft="@drawable/lock"
         android:drawablePadding="15dp"
@@ -77,9 +116,9 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:paddingStart="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/email"
-        app:layout_constraintStart_toStartOf="@+id/email"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintEnd_toEndOf="@+id/nameRestaurant"
+        app:layout_constraintStart_toStartOf="@+id/nameRestaurant"
+        app:layout_constraintTop_toBottomOf="@+id/nameRestaurant" />
 
     <TextView
         android:id="@+id/textView6"
@@ -88,15 +127,15 @@
         android:layout_marginTop="16dp"
         android:text="or\nContinue with"
         android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/restaurantPassword"
+        app:layout_constraintStart_toStartOf="@+id/restaurantPassword"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantPassword" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button3"
         android:layout_width="152dp"
-        android:layout_height="57dp"
+        android:layout_height="47dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/edittextshape"
         android:drawableLeft="@drawable/google"
@@ -111,7 +150,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button4"
         android:layout_width="152dp"
-        android:layout_height="57dp"
+        android:layout_height="47dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/edittextshape"
         android:drawableLeft="@drawable/facebook"
@@ -124,12 +163,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/LoginBotton"
+        android:id="@+id/CreateBotton"
         android:layout_width="152dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/greenbuttonshape"
-        android:text="Login"
+        android:text="Sign In"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -138,7 +177,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
     <TextView
-        android:id="@+id/dontHaveAccountBotton"
+        android:id="@+id/AllreadyHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -146,7 +185,18 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoginBotton" />
+        app:layout_constraintTop_toBottomOf="@+id/CreateBotton" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Chose your location"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
