@@ -21,7 +21,7 @@
         android:layout_height="match_parent">
 
       <ImageButton
-          android:id="@+id/imageButton"
+          android:id="@+id/backButton"
           android:layout_width="24dp"
           android:layout_height="24dp"
           android:layout_marginStart="8dp"
@@ -40,15 +40,15 @@
           android:textColor="@color/black"
           android:textSize="40sp"
           app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toEndOf="@+id/imageButton"
-          app:layout_constraintTop_toTopOf="@+id/imageButton" />
+          app:layout_constraintStart_toEndOf="@+id/backButton"
+          app:layout_constraintTop_toTopOf="@+id/backButton" />
 
       <EditText
           android:id="@+id/enterFoodName"
           android:layout_width="0dp"
           android:layout_height="57dp"
           android:layout_marginStart="8dp"
-          android:layout_marginTop="24dp"
+          android:layout_marginTop="16dp"
           android:layout_marginEnd="8dp"
           android:background="@drawable/edittextshape"
           android:elevation="5dp"
@@ -64,7 +64,7 @@
           android:id="@+id/enterFoodPrice"
           android:layout_width="0dp"
           android:layout_height="57dp"
-          android:layout_marginTop="24dp"
+          android:layout_marginTop="16dp"
           android:background="@drawable/edittextshape"
           android:elevation="5dp"
           android:hint="Enter The food Price"
@@ -79,7 +79,7 @@
           android:id="@+id/textView19"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_marginTop="36dp"
+          android:layout_marginTop="16dp"
           android:paddingLeft="15dp"
           android:paddingRight="15dp"
           android:text="Select Item"
@@ -94,7 +94,6 @@
           android:id="@+id/selectImage"
           android:layout_width="0dp"
           android:layout_height="57dp"
-          android:layout_marginTop="24dp"
           android:layout_marginEnd="16dp"
           android:paddingLeft="15dp"
           android:paddingRight="15dp"
@@ -106,7 +105,6 @@
           android:id="@+id/cardView9"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_marginTop="24dp"
           android:background="@drawable/edittextshape"
           app:cardCornerRadius="15dp"
           app:layout_constraintEnd_toEndOf="@+id/selectImage"
@@ -126,13 +124,15 @@
           android:layout_width="match_parent"
           android:layout_height="47dp"
           android:layout_marginStart="8dp"
-          android:layout_marginTop="16dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="8dp"
           android:background="@drawable/edittextshape"
           android:gravity="center_vertical"
           android:paddingLeft="15dp"
           android:text="Short Description"
           android:textColor="@color/black"
-          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="@+id/cardView9"
+          app:layout_constraintStart_toStartOf="@+id/cardView9"
           app:layout_constraintTop_toBottomOf="@+id/cardView9"
           tools:layout_constarintTop_toBottomOf="@+id/cardView8"
           tools:layout_constraintStart_toStart0f="@+id/selectImage" />
@@ -141,13 +141,55 @@
           android:id="@+id/description"
           android:layout_width="250dp"
           android:layout_height="wrap_content"
-          android:layout_marginTop="12dp"
+          android:layout_marginTop="4dp"
           android:text="yaaaaaaaahahhaaaaaaaaaakkoojjojojjkk"
           android:textColor="@color/black"
           app:layout_constraintEnd_toEndOf="@+id/textView16"
-          app:layout_constraintHorizontal_bias="0.013"
+          app:layout_constraintHorizontal_bias="0.02"
           app:layout_constraintStart_toStartOf="@+id/textView16"
           app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+      <TextView
+          android:id="@+id/textView18"
+          android:layout_width="match_parent"
+          android:layout_height="47dp"
+          android:background="@drawable/edittextshape"
+          android:gravity="center_vertical"
+          android:paddingLeft="15dp"
+          android:text="Short Description"
+          android:textColor="@color/black"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginTop="8dp"
+          app:layout_constraintEnd_toEndOf="@+id/description"
+          app:layout_constraintStart_toStartOf="@+id/description"
+          app:layout_constraintTop_toBottomOf="@+id/description" />
+
+      <EditText
+          android:id="@+id/editText2"
+          android:layout_width="200dp"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:text="Noodle\nBurge\ncake\nmomos"
+          app:layout_constraintEnd_toEndOf="@+id/cardView9"
+          app:layout_constraintStart_toStartOf="@+id/textView18"
+          app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/addItemBotton"
+          android:layout_width="157dp"
+          android:layout_height="57dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginBottom="16dp"
+          android:background="@drawable/greenbuttonshape"
+          android:text="add Item"
+          android:textAllCaps="false"
+          android:textColor="@color/white"
+          android:textSize="20sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/editText2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
   </ScrollView>
