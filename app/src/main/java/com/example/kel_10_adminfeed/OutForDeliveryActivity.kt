@@ -23,7 +23,7 @@ class OutForDeliveryActivity : AppCompatActivity() {
         )
         val moneyStatus = arrayListOf(
             "received",
-            "notReceived",
+            "notreceived",
             "Pending",
         )
         val adapter= DeliveryAdapter(customerName,moneyStatus)
