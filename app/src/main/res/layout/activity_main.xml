@@ -269,6 +269,7 @@
         app:layout_constraintTop_toTopOf="@+id/cardView6">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/outForDeliveryButton"
             android:layout_width="match_parent"
             android:background="@drawable/greencard"
             android:layout_height="match_parent">
