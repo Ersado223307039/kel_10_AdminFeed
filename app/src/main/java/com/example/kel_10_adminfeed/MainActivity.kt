@@ -28,6 +28,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,AdminProfileActivity::class.java)
             startActivity(intent)
         }
+        binding.createUser.setOnClickListener {
+            val intent = Intent(this,CreateUserActivity::class.java)
+            startActivity(intent)
+        }
+        binding.PendingOrdertextView.setOnClickListener {
+            val intent = Intent(this,PendingOrderActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 
