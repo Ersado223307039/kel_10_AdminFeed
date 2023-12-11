@@ -87,7 +87,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <EditText
-        android:id="@+id/nameRestaurant"
+        android:id="@+id/emailorPhone"
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:layout_marginLeft="20dp"
@@ -105,7 +105,7 @@
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <EditText
-        android:id="@+id/restaurantPassword"
+        android:id="@+id/passsword"
         android:layout_width="0dp"
         android:layout_height="52dp"
         android:layout_marginTop="16dp"
@@ -116,9 +116,9 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:paddingStart="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/nameRestaurant"
-        app:layout_constraintStart_toStartOf="@+id/nameRestaurant"
-        app:layout_constraintTop_toBottomOf="@+id/nameRestaurant" />
+        app:layout_constraintEnd_toEndOf="@+id/emailorPhone"
+        app:layout_constraintStart_toStartOf="@+id/emailorPhone"
+        app:layout_constraintTop_toBottomOf="@+id/emailorPhone" />
 
     <TextView
         android:id="@+id/textView6"
@@ -128,9 +128,9 @@
         android:text="or\nContinue with"
         android:textAlignment="center"
         android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="@+id/restaurantPassword"
-        app:layout_constraintStart_toStartOf="@+id/restaurantPassword"
-        app:layout_constraintTop_toBottomOf="@+id/restaurantPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/passsword"
+        app:layout_constraintStart_toStartOf="@+id/passsword"
+        app:layout_constraintTop_toBottomOf="@+id/passsword" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button3"
@@ -163,7 +163,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/CreateBotton"
+        android:id="@+id/createUserBotton"
         android:layout_width="152dp"
         android:layout_height="47dp"
         android:layout_marginTop="16dp"
@@ -185,7 +185,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CreateBotton" />
+        app:layout_constraintTop_toBottomOf="@+id/createUserBotton" />
 
     <TextView
         android:id="@+id/textView3"
