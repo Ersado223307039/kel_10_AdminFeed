@@ -1,18 +1,24 @@
 package com.example.kel_10_adminfeed.adapter
 
 import android.content.Context
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.kel_10_adminfeed.databinding.PendingOrderItemBinding
 
-class PendingOrderAdapter (
-    private val customerNames:ArrayList<String>,
-    private val quantity: ArrayList<String>,
-    private val foodImage:ArrayList<Int>,
-    private  val context:Context
+class PendingOrderAdapter(
+    private val context:Context,
+    private val customerNames:MutableList<String>,
+    private val quantity: MutableList<String>,
+    private val foodImage: MutableList<String>,
+    private val itemCliked: OnItemClicked
     ):RecyclerView.Adapter<PendingOrderAdapter.PendingOrderViewHolder>(){
+    interface OnItemClicked{
+        fun onItemClickListener(position: Int)
+    }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PendingOrderViewHolder {
@@ -32,7 +38,9 @@ class PendingOrderAdapter (
             binding.apply {
                 customerName.text=customerNames[position]
                 priceTextView.text=quantity[position]
-                OrderdImageView.setImageResource(foodImage[position])
+                var uriString = foodImage[position]
+                var uri= Uri.parse(uriString)
+                Glide.with(context).load(uri).into(orderdFoodImage)
 
                 orderdAcceptedButton.apply {
                 if (!isAcceted){
@@ -54,6 +62,10 @@ class PendingOrderAdapter (
                         }
                     }
                 }
+                itemView.setOnClickListener {
+                    itemCliked.onItemClickListener(position)
+                }
+
 
             }
 
