@@ -14,6 +14,7 @@ class MenuItemAdapter(
     private val context: Context,
     private val menuList: ArrayList<AllMenu>,
     databaseReference: DatabaseReference,
+    private val onDeleteClickListener:(position :Int) ->Unit
 
 
     ):RecyclerView.Adapter<MenuItemAdapter.AddItemViewHolder>(){
@@ -53,7 +54,7 @@ class MenuItemAdapter(
                     IncreaseQuantity(position)
                 }
                 deleteButton.setOnClickListener {
-                    deleteQuantity(position)
+                    onDeleteClickListener(position)
                 }
 
 

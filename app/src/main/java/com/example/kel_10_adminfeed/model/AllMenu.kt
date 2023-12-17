@@ -1,6 +1,9 @@
 package com.example.kel_10_adminfeed.model
 
 data class AllMenu(
+
+    val key:String?=null,
+
     val foodName: String?= null,
     val foodPrice: String? = null,
     val foodDescription: String? = null,
